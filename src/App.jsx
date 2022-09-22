@@ -1,5 +1,5 @@
 import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
-import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, useBreakpointValue, Input } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 
@@ -35,7 +35,8 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-      <Box maxW={1200} w="100%" h="100vh" py={10} px={2}>
+       
+      <Box maxW={1200} w="100%" h="100vh" py={10} px={2}>      
         <Button collorScheme="blue" onClick={() => [setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>

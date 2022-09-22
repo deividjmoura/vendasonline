@@ -10,6 +10,9 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
     const [volumes, setVolumes] = useState(dataEdit.volumes || "");
     const [hora, setHora] = useState(dataEdit.hora || "");
     const [trans, setTrans] = useState(dataEdit.trans || "");
+    const [nome, setNome] = useState(dataEdit.nome || "");
+    const [codigo, setCodigo] = useState(dataEdit.codigo || "");
+    const [dia, setDia] = useState(dataEdit.dia || "");
     
     const handleSave = () => {
         if (!pedido || !nota) return;
@@ -17,7 +20,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
             return alert("Nota já cadastrada");
         }
         if (Object.keys(dataEdit).length) {
-            data[dataEdit.index] = { pedido, nota, description, volumes, hora, trans };
+            data[dataEdit.index] = { oedido, nota, description, volumes, hora, trans };
         }
 
         const newDataArray = !Object.keys(dataEdit).length
