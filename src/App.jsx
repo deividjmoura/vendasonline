@@ -40,7 +40,7 @@ const App = () => {
         <Button collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
-        <Input placeholder="Coloque aqui seu nome e código:" textAlign="center"></Input>
+        <Input placeholder="Coloque aqui seu nome e código:" textAlign="center" />
         <Box overflowY="auto" height="100%">
          <Table mt="6">
           <Thead>
