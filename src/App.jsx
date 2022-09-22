@@ -27,6 +27,7 @@ const App = () => {
       setData(newArray);
 
       localStorage.setItem("cad_cliente", JSON.stringify(newArray));
+      
     };
 
    return (
@@ -35,11 +36,11 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-       
       <Box maxW={1200} w="100%" h="100vh" py={10} px={2}>      
-        <Button collorScheme="blue" onClick={() => [setDataEdit({}), onOpen()]}>
+        <Button class="hidden-print" collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
+        <Input placeholder="Coloque aqui seu nome e código:" textAlign="center"></Input>
         <Box overflowY="auto" height="100%">
          <Table mt="6">
           <Thead>

@@ -10,21 +10,22 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
     const [volumes, setVolumes] = useState(dataEdit.volumes || "");
     const [hora, setHora] = useState(dataEdit.hora || "");
     const [trans, setTrans] = useState(dataEdit.trans || "");
-    const [nome, setNome] = useState(dataEdit.nome || "");
-    const [codigo, setCodigo] = useState(dataEdit.codigo || "");
-    const [dia, setDia] = useState(dataEdit.dia || "");
-    
+
     const handleSave = () => {
         if (!pedido || !nota) return;
         if (notaAlreadyExists()) {
             return alert("Nota já cadastrada");
         }
         if (Object.keys(dataEdit).length) {
-            data[dataEdit.index] = { pedido, nota, description, volumes, hora, trans };
+            data[dataEdit.index] = {pedido, nota, description, volumes, hora, trans };
         }
 
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+
         const newDataArray = !Object.keys(dataEdit).length
-        ? [...(data ? data : []), { pedido, nota, description, volumes, hora, trans }]
+        ? [...(data ? data : []), {pedido, nota, description, volumes, hora: `${hours}:${minutes}`, trans }]
         : [...(data ? data :[])];
 
         localStorage.setItem("cad_cliente", JSON.stringify(newDataArray));
@@ -32,13 +33,14 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
         setData(newDataArray);
 
         onClose();
+        
     };
-
-    const notaAlreadyExists = () => {
+        const notaAlreadyExists = () => {
         if (dataEdit.nota !== nota && data?.length) {
             return data.find((item) => item.nota === nota);
         }
             return false;
+
     }
     return (
         <>
@@ -52,30 +54,23 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
                         <Box>
                             <FormLabel>Pedido</FormLabel>
                             <Input 
-                                type="text"
+                                type="number"
                                 value={pedido}
                                 onChange={(e) => setPedido(e.target.value)} />
                         </Box>
                         <Box>
                             <FormLabel>Nota</FormLabel>
                             <Input 
-                                type="text"
+                                type="number"
                                 value={nota}
                                 onChange={(e) => setNota(e.target.value)} />
                         </Box>
                         <Box>
                             <FormLabel>Volumes</FormLabel>
                             <Input 
-                                type="text"
+                                type="number"
                                 value={volumes}
                                 onChange={(e) => setVolumes(e.target.value)} />
-                        </Box>
-                        <Box>
-                            <FormLabel>Hora</FormLabel>
-                            <Input 
-                                type="text"
-                                value={hora}
-                                onChange={(e) => setHora(e.target.value)} />
                         </Box>
                         <Box>
                             <FormLabel>Descrição</FormLabel>
