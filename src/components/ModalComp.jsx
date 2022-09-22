@@ -20,7 +20,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
             return alert("Nota já cadastrada");
         }
         if (Object.keys(dataEdit).length) {
-            data[dataEdit.index] = { oedido, nota, description, volumes, hora, trans };
+            data[dataEdit.index] = { pedido, nota, description, volumes, hora, trans };
         }
 
         const newDataArray = !Object.keys(dataEdit).length
