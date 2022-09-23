@@ -109,7 +109,7 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
-<Box>
+<Tfoot>
     <Button
     direction='row' 
     ml='-50'
@@ -122,7 +122,7 @@ const App = () => {
     borderColor='green.500'
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
-    </Box>
+    </Tfoot>
     </Flex>
   );
 };
