@@ -1,5 +1,5 @@
-import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
-import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, useBreakpointValue, Input } from '@chakra-ui/react';
+import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, useBreakpointValue, Input, Link, Text} from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
@@ -109,6 +109,12 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
+      <Text className="noprint">
+  Gostou?! Da uma olhadinha no meu{' '}
+        <Link href='https://deividmoura.netlify.app' isExternal>
+  site <ExternalLinkIcon mx='2px' />
+ </Link>
+      </Text>
     </Flex>
   );
 };
