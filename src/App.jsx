@@ -115,7 +115,7 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
-  Mais?! <ExternalLinkIcon mx='2px'/> </Button>
+  Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
     </Flex>
     
   );
