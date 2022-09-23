@@ -2,6 +2,7 @@ import { EditIcon, DeleteIcon } from "@chakra-ui/icons";
 import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, useBreakpointValue, Input } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
+import Imprimir from "./components/Imprimir";
 
 const App = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -31,14 +32,17 @@ const App = () => {
     };
 
    return (
-    <Flex h="100vh"
+    <Flex 
     align="center"
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-      <Box maxW={1200} w="100%" h="100vh" py={10} px={2}>      
-        <Button collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
+      <Box maxW={1200} w="100%" h="85vh" py={2} px={2}>      
+        <Button className="noprint" collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
+        </Button>
+        <Button className="noprint" collorScheme="blue" onClick={Imprimir}>
+          IMPRIMIR
         </Button>
         <Input placeholder="Coloque aqui seu nome e código:" textAlign="center" />
         <Box overflowY="auto" height="100%">
