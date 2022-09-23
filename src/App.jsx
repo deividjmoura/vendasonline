@@ -108,7 +108,7 @@ const App = () => {
           dataEdit={dataEdit}
           setDataEdit={setDataEdit}
         />
-      )}
+      )}/*
     <Link
     direction='row' 
     align="center"
@@ -121,7 +121,7 @@ const App = () => {
     border='2px'
     borderColor='green.500'
     fontFamily="poppins" href='https://deividmoura.netlify.app' isExternal>
-  Mais?! <ExternalLinkIcon mx='5px'/> </Link>
+  Mais?! <ExternalLinkIcon mx='5px'/> </Link>*/
     </Flex>
   );
 };
