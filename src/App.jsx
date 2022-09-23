@@ -110,10 +110,7 @@ const App = () => {
         />
       )}
 <Box>
-    <Button 
-    isLoading
-  colorScheme='blue'
-  spinner={<BeatLoader size={8} color='white' />}
+    <Button
     colorScheme='blackAlpha'
     className="noprint"
     size='md'
