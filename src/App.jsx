@@ -96,20 +96,7 @@ const App = () => {
               </Tr>
             ))}
           </Tbody>
-         </Table>
-        </Box>
-      </Box>
-      {isOpen && (
-        <ModalComp
-          isOpen={isOpen}
-          onClose={onClose}
-          data={data}
-          setData={setData}
-          dataEdit={dataEdit}
-          setDataEdit={setDataEdit}
-        />
-      )}
-<Tfoot>
+          <Tfoot>
     <Button
     direction='row' 
     ml='-50'
@@ -123,6 +110,19 @@ const App = () => {
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
     </Tfoot>
+         </Table>
+        </Box>
+      </Box>
+      {isOpen && (
+        <ModalComp
+          isOpen={isOpen}
+          onClose={onClose}
+          data={data}
+          setData={setData}
+          dataEdit={dataEdit}
+          setDataEdit={setDataEdit}
+        />
+      )}
     </Flex>
   );
 };
