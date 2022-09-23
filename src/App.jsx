@@ -99,7 +99,7 @@ const App = () => {
           <Tfoot>
     <Button
     direction='row' 
-    ml='-50'
+    align='center'
     colorScheme='blackAlpha'
     className="noprint"
     size='md'
