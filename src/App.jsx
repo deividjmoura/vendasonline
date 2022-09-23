@@ -109,13 +109,14 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
-      <Text className="noprint">
-  Gostou?! Da uma olhadinha no meu{' '}
-        <Link href='https://deividmoura.netlify.app' isExternal>
-  site <ExternalLinkIcon mx='2px' />
- </Link>
-      </Text>
     </Flex>
+<Button colorScheme='blackAlpha'
+    className="noprint"
+    align="center"
+    justify="center"
+    fontSize="13px"
+    fontFamily="poppins"><Link href='https://deividmoura.netlify.app' isExternal>
+  Mais?! <ExternalLinkIcon mx='2px' /></Button>
   );
 };
 
