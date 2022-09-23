@@ -109,15 +109,21 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
-    <Button colorScheme='blackAlpha'
+<Box>
+    <Button 
+    isLoading
+  colorScheme='blue'
+  spinner={<BeatLoader size={8} color='white'
+    colorScheme='blackAlpha'
     className="noprint"
-    w="45"
-    ml="50%"
-    align="center"
-    justify="center"
-    fontSize="13px"
+    size='md'
+    height='48px'
+    width='200px'
+    border='2px'
+    borderColor='green.500'
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
+</Box>
     </Flex>
     
   );
