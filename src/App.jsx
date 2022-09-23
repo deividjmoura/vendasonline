@@ -108,20 +108,8 @@ const App = () => {
           dataEdit={dataEdit}
           setDataEdit={setDataEdit}
         />
-      )}/*
-    <Link
-    direction='row' 
-    align="center"
-    justify="center"
-    colorScheme='blackAlpha'
-    className="noprint"
-    size='md'
-    height='48px'
-    width='200px'
-    border='2px'
-    borderColor='green.500'
-    fontFamily="poppins" href='https://deividmoura.netlify.app' isExternal>
-  Mais?! <ExternalLinkIcon mx='5px'/> </Link>*/
+      )}
+    
     </Flex>
   );
 };
