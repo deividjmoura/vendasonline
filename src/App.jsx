@@ -48,22 +48,22 @@ const App = () => {
         <Box overflowY="auto" height="100%">
          <Table mt="6">
           <Thead>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Pedido
             </Th>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Nota
             </Th>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Volumes
             </Th>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Hora
             </Th>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Descrição
             </Th>
-            <Th maxW={isMobile ? 5 : 100} fontSize="15px">
+            <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Trans
             </Th>
             <Th p={0}></Th>
@@ -78,16 +78,16 @@ const App = () => {
                 <Td maxW={isMobile ? 5 : 100}>{hora}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{description}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{trans}</Td>
-                <Td p={0}>
+                <Td p={0} className="noprint">
                   <EditIcon
-                  fontSize={15}
+                  fontSize={10}
                   onClick={() => [
                     setDataEdit({ pedido, nota, volumes, hora, description, trans, index}),
                     onOpen(),
                   ]}
                   />
                 </Td>
-                <Td p={0}>
+                <Td p={0} className="noprint">
                   <DeleteIcon
                   fontSize={15}
                   onClick={() => handleRemove(nota)}
