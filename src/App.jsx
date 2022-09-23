@@ -97,6 +97,8 @@ const App = () => {
             ))}
           </Tbody>
           <Tfoot>
+    <Tr>
+    <Td>
     <Button
     direction='row' 
     align='center'
@@ -109,6 +111,8 @@ const App = () => {
     borderColor='green.500'
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
+     </Tr>
+    </Td>
     </Tfoot>
          </Table>
         </Box>
