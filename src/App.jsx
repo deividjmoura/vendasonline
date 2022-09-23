@@ -96,24 +96,6 @@ const App = () => {
               </Tr>
             ))}
           </Tbody>
-          <Tfoot>
-    <Tr>
-    <Td>
-    <Button
-    direction='row' 
-    align='center'
-    colorScheme='blackAlpha'
-    className="noprint"
-    size='md'
-    height='48px'
-    width='200px'
-    border='2px'
-    borderColor='green.500'
-    fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
-  Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
-     </Td>
-     </Tr>
-    </Tfoot>
          </Table>
         </Box>
       </Box>
@@ -127,6 +109,19 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
+    <Link
+    direction='row' 
+    align="center"
+    justify="center"
+    colorScheme='blackAlpha'
+    className="noprint"
+    size='md'
+    height='48px'
+    width='200px'
+    border='2px'
+    borderColor='green.500'
+    fontFamily="poppins" href='https://deividmoura.netlify.app' isExternal>
+  Mais?! <ExternalLinkIcon mx='5px'/> </Link>
     </Flex>
   );
 };
