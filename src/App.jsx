@@ -109,14 +109,15 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
-    </Flex>
     <Button colorScheme='blackAlpha'
     className="noprint"
     align="center"
     justify="center"
     fontSize="13px"
-    fontFamily="poppins"><Link href='https://deividmoura.netlify.app' isExternal>
+    fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='2px'/> </Button>
+    </Flex>
+    
   );
 };
 
