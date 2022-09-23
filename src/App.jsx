@@ -112,7 +112,7 @@ const App = () => {
 <Box>
     <Button
     direction='row' 
-    align='center'
+    ml='-50'
     colorScheme='blackAlpha'
     className="noprint"
     size='md'
