@@ -111,6 +111,8 @@ const App = () => {
       )}
 <Box>
     <Button
+    direction='row' 
+    align='center'
     colorScheme='blackAlpha'
     className="noprint"
     size='md'
