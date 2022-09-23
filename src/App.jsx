@@ -111,7 +111,8 @@ const App = () => {
       )}
     <Button colorScheme='blackAlpha'
     className="noprint"
-    mr="50%"
+    w="45"
+    ml="50%"
     align="center"
     justify="center"
     fontSize="13px"
