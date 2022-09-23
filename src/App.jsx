@@ -111,8 +111,8 @@ const App = () => {
     borderColor='green.500'
     fontFamily="poppins"> <Link href='https://deividmoura.netlify.app' isExternal>
   Mais?! <ExternalLinkIcon mx='5px'/> </Link> </Button>
+     </Td>
      </Tr>
-    </Td>
     </Tfoot>
          </Table>
         </Box>
