@@ -113,7 +113,7 @@ const App = () => {
     <Button 
     isLoading
   colorScheme='blue'
-  spinner={<BeatLoader size={8} color='white'
+  spinner={<BeatLoader size={8} color='white' />}
     colorScheme='blackAlpha'
     className="noprint"
     size='md'
