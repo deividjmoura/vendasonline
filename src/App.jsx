@@ -37,7 +37,7 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-      <Box maxW={1200} w="100%" h="85vh" py={2} px={2}>      
+      <Box maxW={1200} w="100%" h="100%" py={2} px={2}>      
         <Button className="noprint" collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
