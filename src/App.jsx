@@ -1,5 +1,5 @@
 import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-import { Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, Tfoot, useBreakpointValue, Input, Link, Text} from '@chakra-ui/react';
+import { ButtonGroup, Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, Tfoot, useBreakpointValue, Input, Link, Text, InputGroup} from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
@@ -37,16 +37,26 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-      <Box maxW={1200} w="100%" h="100%" py={2} px={2}>      
-        <Button className="noprint" collorScheme="blue" onClick={() => [ setDataEdit({}), onOpen()]}>
+      <Box maxW={1200} w="100%" h="100%" py={2} px={2}>     
+      <ButtonGroup gap='4'  display='flex'
+    alignItems='center'
+    justifyContent='center'>
+        <Button className="noprint" collorScheme="whiteAlpha" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
-        <Button className="noprint" collorScheme="blue" onClick={Imprimir}>
+        <Button className="noprint" collorScheme="whiteAlpha" onClick={Imprimir}>
           IMPRIMIR
         </Button>
+        </ButtonGroup>
+        <InputGroup display='flex'
+    alignItems='center'
+    justifyContent='center'>
+        <Input type='text' placeholder="Nome"/>
+        <Input type='number' placeholder='Código' />
         <Input placeholder="Coloque aqui seu nome e código:" textAlign="center" />
-        <Box overflowY="auto" height="100%">
-         <Table mt="6">
+        </InputGroup>
+        <Box overflowY="auto" maxWidth="100%" height="100%">
+         <Table mt="6" maxWidth="100%" colorScheme="orange" border-spacing="1px">
           <Thead>
             <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Pedido
