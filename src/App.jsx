@@ -3,6 +3,7 @@ import { ButtonGroup, Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tb
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
+import { Clear } from "@material-ui/icons";
 
 const App = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,6 +31,10 @@ const App = () => {
       localStorage.setItem("cad_cliente", JSON.stringify(newArray));
       
     };
+    function cleara() { 
+      localStorage.clear();
+      document.location.reload(true);
+     };
 
    return (
     <Flex 
@@ -40,12 +45,15 @@ const App = () => {
       <Box maxW={1200} w="100%" h="100%" py={2} px={2}>     
       <ButtonGroup gap='4'  display='flex'
     alignItems='center'
-    justifyContent='center'>
-        <Button className="noprint" collorScheme="whiteAlpha" onClick={() => [ setDataEdit({}), onOpen()]}>
+    justifyContent='center' collorScheme="whiteAlpha">
+        <Button className="noprint" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
-        <Button className="noprint" collorScheme="whiteAlpha" onClick={Imprimir}>
+        <Button className="noprint" onClick={Imprimir}>
           IMPRIMIR
+        </Button>
+        <Button className="noprint" onClick={cleara}>
+          LIMPAR DADOS
         </Button>
         </ButtonGroup>
         <InputGroup display='flex'
@@ -53,7 +61,7 @@ const App = () => {
     justifyContent='center'>
         <Input type='text' placeholder="Nome"/>
         <Input type='number' placeholder='Código' />
-        <Input placeholder="Coloque aqui seu nome e código:" textAlign="center" />
+        <Input type='date' />
         </InputGroup>
         <Box overflowY="auto" maxWidth="100%" height="100%">
          <Table mt="6" maxWidth="100%" colorScheme="orange" border-spacing="1px">
@@ -86,7 +94,7 @@ const App = () => {
                 <Td maxW={isMobile ? 5 : 100}>{nota}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{volumes}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{hora}</Td>
-                <Td maxW={isMobile ? 5 : 100}>{description}</Td>
+                <Td maxW={isMobile ? 5 : 500}>{description}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{trans}</Td>
                 <Td p={0} className="noprint">
                   <EditIcon

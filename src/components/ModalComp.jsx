@@ -10,7 +10,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
     const [volumes, setVolumes] = useState(dataEdit.volumes || "");
     const [hora, setHora] = useState(dataEdit.hora || "");
     const [trans, setTrans] = useState(dataEdit.trans || "");
-
+    
     const handleSave = () => {
         if (!pedido || !nota) return;
         if (notaAlreadyExists()) {
@@ -23,9 +23,10 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
         const now = new Date();
         const hours = now.getHours();
         const minutes = now.getMinutes();
+        
 
         const newDataArray = !Object.keys(dataEdit).length
-        ? [...(data ? data : []), {pedido, nota, description, volumes, hora: `${hours}:${minutes}`, trans }]
+        ? [...(data ? data : []), { pedido, nota, description, volumes, hora: `${hours}:${minutes}`, trans }]
         : [...(data ? data :[])];
 
         localStorage.setItem("cad_cliente", JSON.stringify(newDataArray));
