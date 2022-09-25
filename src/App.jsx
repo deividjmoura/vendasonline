@@ -1,9 +1,8 @@
-import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { EditIcon, DeleteIcon} from "@chakra-ui/icons";
 import { ButtonGroup, Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, Tfoot, useBreakpointValue, Input, Link, Text, InputGroup} from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
-import { Clear } from "@material-ui/icons";
 
 const App = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
