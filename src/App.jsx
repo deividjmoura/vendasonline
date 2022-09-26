@@ -44,7 +44,7 @@ const App = () => {
       <Box maxW={1200} w="100%" h="100%" py={2} px={2}>     
       <ButtonGroup gap='4'  display='flex'
     alignItems='center'
-    justifyContent='center' collorScheme="whiteAlpha">
+    justifyContent='center'>
         <Button className="noprint" onClick={() => [ setDataEdit({}), onOpen()]}>
           NOVO REGISTRO
         </Button>
@@ -62,8 +62,8 @@ const App = () => {
         <Input type='number' placeholder='Código' />
         <Input type='date' />
         </InputGroup>
-        <Box overflowY="auto" maxWidth="100%" height="100%">
-         <Table mt="6" maxWidth="100%" colorScheme="orange" border-spacing="1px">
+        <Box overflowY="auto" maxWidth="100%" >
+         <Table mt="6" maxWidth="100%" colorScheme="orange" border-spacing="2px">
           <Thead>
             <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Pedido
