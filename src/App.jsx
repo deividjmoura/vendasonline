@@ -45,13 +45,13 @@ const App = () => {
       <ButtonGroup gap='4'  display='flex'
     alignItems='center'
     justifyContent='center'>
-        <Button className="noprint" onClick={() => [ setDataEdit({}), onOpen()]}>
+        <Button  onClick={() => [ setDataEdit({}), onOpen()]} className="noprint">
           NOVO REGISTRO
         </Button>
-        <Button className="noprint" onClick={Imprimir}>
+        <Button onClick={Imprimir} className="noprint">
           IMPRIMIR
         </Button>
-        <Button className="noprint" onClick={cleara}>
+        <Button onClick={cleara} className="noprint">
           LIMPAR DADOS
         </Button>
         </ButtonGroup>
