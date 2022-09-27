@@ -79,14 +79,13 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)} />
                         </Box>
-                        <Box>
-                            <FormLabel>Trans</FormLabel>
+                        <Box paddingTop={5}>
                             <Select placeholder='Qual é a transportadora?' onChange={(e) => setTrans(e.target.value)}>
-                                <option value='JAMEF'>JAMEF</option>
-                                <option value='MIRA'>MIRA</option>
                                 <option value='RDS'>RDS</option>
                                 <option value='JADLOG'>JADLOG</option>
-                                <option value='REUNIDAS'>REUNIDAS</option>                         
+                                <option value='REUNIDAS'>REUNIDAS</option> 
+                                <option value='JAMEF'>JAMEF</option>
+                                <option value='MIRA'>MIRA</option>                        
                                 </Select>
                         </Box>
                     </FormControl>
