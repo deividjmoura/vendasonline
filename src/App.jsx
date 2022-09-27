@@ -1,4 +1,4 @@
-import { EditIcon, DeleteIcon} from "@chakra-ui/icons";
+import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { ButtonGroup, Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, Tfoot, useBreakpointValue, Input, Link, Text, InputGroup} from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
@@ -57,7 +57,7 @@ const App = () => {
         </ButtonGroup>
         <InputGroup display='flex'
     alignItems='center'
-    justifyContent='center'>
+    justifyContent='center' mt={2}>
         <Input type='text' placeholder="Nome"/>
         <Input type='number' placeholder='Código' />
         <Input type='date' />
@@ -115,6 +115,11 @@ const App = () => {
           </Tbody>
          </Table>
         </Box>
+        <Box align='center' alignItems='center'
+    justifyContent='center' mt={"450px"}>
+        <Link fontSize={15} className="noprint" href='https://deividmoura.netlify.app' isExternal>
+Would you like to see more? 😎<ExternalLinkIcon mx='2px' />
+</Link></Box>
       </Box>
       {isOpen && (
         <ModalComp
