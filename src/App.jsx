@@ -126,8 +126,9 @@ const App = () => {
           setDataEdit={setDataEdit}
         />
       )}
-    
+      
     </Flex>
+    
   );
 };
 

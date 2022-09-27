@@ -1,6 +1,7 @@
 @media print{
-    #noprint{
+    .noprint{
         display:none;
+        visibility: hidden;
     }
  }
  
