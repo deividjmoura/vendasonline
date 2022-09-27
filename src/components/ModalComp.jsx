@@ -1,6 +1,5 @@
 import {
-    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, FormControl, FormLabel, Input, Box,
-} from '@chakra-ui/react';
+    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, FormControl, FormLabel, Input, Box, Select } from '@chakra-ui/react';
 import { useState } from 'react';
 
 const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
@@ -82,10 +81,13 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
                         </Box>
                         <Box>
                             <FormLabel>Trans</FormLabel>
-                            <Input 
-                                type="text"
-                                value={trans}
-                                onChange={(e) => setTrans(e.target.value)} />
+                            <Select placeholder='Qual é a transportadora?' onChange={(e) => setTrans(e.target.value)}>
+                                <option value='JAMEF'>JAMEF</option>
+                                <option value='MIRA'>MIRA</option>
+                                <option value='RDS'>RDS</option>
+                                <option value='JADLOG'>JADLOG</option>
+                                <option value='REUNIDAS'>REUNIDAS</option>                         
+                                </Select>
                         </Box>
                     </FormControl>
                 </ModalBody>

@@ -63,7 +63,7 @@ const App = () => {
         <Input type='date' />
         </InputGroup>
         <Box overflowY="auto" maxWidth="100%" >
-         <Table mt="6" maxWidth="100%" colorScheme="orange" border-spacing="2px">
+         <Table mt="6" maxWidth="100%" colorScheme="orange">
           <Thead>
             <Th maxW={isMobile ? 5 : 100} fontSize="10px">
               Pedido
