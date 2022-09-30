@@ -35,24 +35,31 @@ module.exports = {
         }
     },
 
-        async update(request, response) {
+    async update(request, response) {
             const { pedido, nota, volumes, hora, descricao, trans } = request.body;
 
-            if(!pedido && !nota && !volumes && !hora && !descricao && !trans) {
+        if(!pedido || !nota || !volumes || !hora || !descricao || !trans) {
                 return response.status(400).json({ error: "Você precisa informar os dados! "})
-            }
+            } else if (pedido && nota && volumes && hora && descricao && trans) {
+                request.Tabela.pedido = pedido,
+                request.Tabela.nota = nota,
+                request.Tabela.volumes = volumes,
+                request.Tabela.hora = hora,
+                request.Tabela.descricao = descricao,
+                request.Tabela.trans = trans
+            };
 
-            if (pedido) {request.Tabela.pedido = pedido};
-            if (nota) request.Tabela.nota = nota;
-            if (volumes) request.Tabela.volumes = volumes;
-            if (hora) request.Tabela.hora = hora;
-            if (descricao) request.Tabela.descricao = descricao;
-            if (trans) request.Tabela.trans = trans;
+       /* if (pedido) request.Tabela.pedido = pedido;
+        if (nota) request.Tabela.nota = nota;
+        if (volumes) request.Tabela.volumes = volumes;
+        if (hora) request.Tabela.hora = hora;
+        if (descricao) request.Tabela.descricao = descricao;
+        if (trans) request.Tabela.trans = trans;*/
         
-            try {
+        try {
                 await response.Tabela.save();
                 return response.status(200).json({ message: "Tabela atualizada com sucesso! "})
-            } catch (err) {
+        } catch (err) {
                 response.status(500).json({ error: err.message });
             }
         },
