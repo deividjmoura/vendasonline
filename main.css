@@ -1,7 +1,7 @@
 @media print{
     .noprint{
         display:none;
-        visibility: hidden;
+        visibility: hidden !important;
     }
  }
  

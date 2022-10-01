@@ -115,8 +115,8 @@ const App = () => {
           </Tbody>
          </Table>
         </Box>
-        <Box align='center' alignItems='center'
-    justifyContent='center' mt={"450px"}>
+        <Box align='center' alignItems='end'
+    justifyContent='center'>
         <Link fontSize={15} className="noprint" href='https://deividmoura.netlify.app' isExternal>
 Would you like to see more? 😎<ExternalLinkIcon mx='2px' />
 </Link></Box>
