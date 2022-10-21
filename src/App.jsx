@@ -1,5 +1,7 @@
 import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
-import { ButtonGroup, Box, Flex, Button, useDisclosure, Table, Thead, Tr, Th, Tbody, Td, Tfoot, useBreakpointValue, Input, Link, Text, InputGroup} from '@chakra-ui/react';
+import { ButtonGroup, Box, Flex, Button,
+  useDisclosure, Table, Thead, Tr, Th, Tbody, Td, 
+  useBreakpointValue, Input, Link, InputGroup} from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
@@ -35,7 +37,7 @@ const App = () => {
       document.location.reload(true);
      };
 
-   return (
+    return (
     <Flex 
     align="center"
     justify="center"
@@ -99,7 +101,7 @@ const App = () => {
                   <EditIcon
                   fontSize={10}
                   onClick={() => [
-                    setDataEdit({ pedido, nota, volumes, hora, description, trans, index}),
+                    setDataEdit({ pedido, nota, volumes, hora, description, trans, index }),
                     onOpen(),
                   ]}
                   />

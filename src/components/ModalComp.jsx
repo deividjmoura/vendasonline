@@ -1,5 +1,5 @@
 import {
-    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, FormControl, FormLabel, Input, Box, Select } from '@chakra-ui/react';
+    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, FormControl, FormLabel, Input, Box, Select, background } from '@chakra-ui/react';
 import { useState } from 'react';
 
 const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
@@ -42,6 +42,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
             return false;
 
     }
+
     return (
         <>
             <Modal isOpen={isOpen} onClose={onClose}>
