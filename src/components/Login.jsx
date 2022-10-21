@@ -1,18 +1,17 @@
-import { Box, Flex, Spacer } from '@chakra-ui/react';
+import { Box, Flex, Spacer, Input, Stack } from '@chakra-ui/react';
 
 const Login = () => {
     return (
-    <Flex pb={3}>
-  <Box p='4' bg='red.400'>
-    User 1
-  </Box>
-  <Spacer />
-  <Box p='4' bg='blue.400'>
-    User 2
-  </Box>
-  <Spacer />
-  <Box p='4' bg='green.400'>
-    User 3
+    <Flex align="center"
+    justify="center"
+    fontSize="13px"
+    fontFamily="poppins" 
+    height={300}>
+  <Box p='4' bg='blue.460' >
+  <Stack spacing={3}>
+  <Input variant='flushed' placeholder='Código:' />
+  <Input variant='flushed' placeholder='Senha:' />
+</Stack>
   </Box>
 </Flex>
 )};
