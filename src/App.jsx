@@ -5,6 +5,7 @@ import { ButtonGroup, Box, Flex, Button,
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
+import Login from "./components/Login";
 
 const App = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -43,7 +44,8 @@ const App = () => {
     justify="center"
     fontSize="13px"
     fontFamily="poppins" >
-      <Box maxW={1200} w="100%" h="100%" py={2} px={2}>     
+      <Box maxW={1200} w="100%" h="100%" py={2} px={2}>
+        <Login></Login>     
       <ButtonGroup gap='4'  display='flex'
     alignItems='center'
     justifyContent='center'>
