@@ -37,7 +37,7 @@ const App = () => {
       localStorage.clear();
       document.location.reload(true);
      };
-     /* 
+     /* --- Creating a afunaction to change the color of placeholder ---
          function colortrans() {
           const trans = document.querySelector('css-h8oyu9');
       if (trans === RDS) {
@@ -46,8 +46,8 @@ const App = () => {
     };
      */ 
     return (
-    /*  <Login></Login> */
-    <Flex 
+     <Login></Login> 
+    /* <Flex 
     align="center"
     justify="center"
     fontSize="13px"
@@ -144,7 +144,7 @@ Would you like to see more? 😎<ExternalLinkIcon mx='2px' />
       )}
       
     </Flex>
-    
+    */
   );
 };
 

@@ -11,7 +11,7 @@ const Login = () => {
   <Stack spacing={3}>
   <Input variant='flushed' placeholder='Código:' name='usuario' />
   <Input variant='flushed' placeholder='Senha:' name='senha' />
-  <Input variant='flushed' type='submit' value="Entrar" />
+  <Input variant='filled' type="button" value="Entrar" />
 </Stack>
   </Box>
 </Flex>
