@@ -5,7 +5,7 @@ import { ButtonGroup, Box, Flex, Button,
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 
 const App = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,7 +21,7 @@ const App = () => {
       const db_costumer =localStorage.getItem("cad_cliente")
       ? JSON.parse(localStorage.getItem("cad_cliente"))
       : [];
-
+      
       setData(db_costumer);
     }, [setData]);
 
@@ -37,10 +37,17 @@ const App = () => {
       localStorage.clear();
       document.location.reload(true);
      };
-
+     /* 
+         function colortrans() {
+          const trans = document.querySelector('css-h8oyu9');
+      if (trans === RDS) {
+        --chakra-colors-chakra-placeholder-color:
+      }
+    };
+     */ 
     return (
-      <Login></Login>
-    /*<Flex 
+    /*  <Login></Login> */
+    <Flex 
     align="center"
     justify="center"
     fontSize="13px"
@@ -136,7 +143,7 @@ Would you like to see more? 😎<ExternalLinkIcon mx='2px' />
         />
       )}
       
-    </Flex>*/
+    </Flex>
     
   );
 };
