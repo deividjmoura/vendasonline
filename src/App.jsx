@@ -90,7 +90,10 @@ const App = () => {
           </Thead>
           <Tbody>
             {data.map(({ pedido, nota, volumes, hora, description, trans }, index) => (
-              <Tr key={index} cursor="pointer " _hover={{ bg: "gray.100"}}>
+              <Tr key={index} cursor="pointer " bg={ trans === "RDS" ? "pink" : "gray.100" &&
+               trans === "JADLOG" ? "#38A169" : "gray.100" &&
+               trans === "REUNIDAS" ? "#4A5568" : "gray.100"
+               }>
                 <Td maxW={isMobile ? 5 : 100}>{pedido}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{nota}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{volumes}</Td>
@@ -99,7 +102,7 @@ const App = () => {
                 <Td maxW={isMobile ? 5 : 100}>{trans}</Td>
                 <Td p={0} className="noprint">
                   <EditIcon
-                  fontSize={10}
+                  fontSize={17}
                   onClick={() => [
                     setDataEdit({ pedido, nota, volumes, hora, description, trans, index }),
                     onOpen(),
@@ -108,7 +111,7 @@ const App = () => {
                 </Td>
                 <Td p={0} className="noprint">
                   <DeleteIcon
-                  fontSize={15}
+                  fontSize={18}
                   onClick={() => handleRemove(nota)}
                   />
                 </Td>

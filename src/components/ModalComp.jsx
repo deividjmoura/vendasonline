@@ -40,7 +40,6 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
             return data.find((item) => item.nota === nota);
         }
             return false;
-
     }
 
     return (
