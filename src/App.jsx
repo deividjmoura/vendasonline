@@ -1,7 +1,7 @@
 import { EditIcon, DeleteIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { ButtonGroup, Box, Flex, Button,
   useDisclosure, Table, Thead, Tr, Th, Tbody, Td, 
-  useBreakpointValue, Input, Link, InputGroup} from '@chakra-ui/react';
+  useBreakpointValue, Input, Link, InputGroup, useToast } from '@chakra-ui/react';
 import { useEffect, useState } from "react";
 import ModalComp from "./components/ModalComp";
 import Imprimir from "./components/Imprimir";
@@ -90,16 +90,16 @@ const App = () => {
           </Thead>
           <Tbody>
             {data.map(({ pedido, nota, volumes, hora, description, trans }, index) => (
-              <Tr key={index} cursor="pointer " bg={ trans === "RDS" ? "pink" : "gray.100" &&
-               trans === "JADLOG" ? "#38A169" : "gray.100" &&
-               trans === "REUNIDAS" ? "#4A5568" : "gray.100"
-               }>
+              <Tr key={index} cursor="pointer ">
                 <Td maxW={isMobile ? 5 : 100}>{pedido}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{nota}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{volumes}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{hora}</Td>
                 <Td maxW={isMobile ? 5 : 500}>{description}</Td>
-                <Td maxW={isMobile ? 5 : 100}>{trans}</Td>
+                <Td maxW={isMobile ? 5 : 100} bg={ trans === "RDS" ? "pink" : "gray.100" &&
+               trans === "JADLOG" ? "#38A169" : "gray.100" &&
+               trans === "REUNIDAS" ? "#4A5568" : "gray.100"
+               }>{trans}</Td>
                 <Td p={0} className="noprint">
                   <EditIcon
                   fontSize={17}

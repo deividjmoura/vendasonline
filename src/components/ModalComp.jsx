@@ -40,7 +40,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
             return data.find((item) => item.nota === nota);
         }
             return false;
-    }
+    };
 
     return (
         <>
@@ -92,7 +92,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
                 </ModalBody>
 
                     <ModalFooter justifyContent="start">
-                        <Button colorScheme="green" mr={3} onClick={handleSave} action="/home/user/Documentos/web/Vendas-Online/API" method="post">
+                        <Button colorScheme="green" mr={3} onClick={handleSave && Toast} action="/home/user/Documentos/web/Vendas-Online/API" method="post">
                             SALVAR
                         </Button>
                         <Button colorScheme="red" onClick={onClose}>
