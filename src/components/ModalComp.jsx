@@ -14,7 +14,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
         if (!pedido || !nota) return;
         if (notaAlreadyExists()) {
             return alert("Nota já cadastrada");
-        }
+        } 
         if (Object.keys(dataEdit).length) {
             data[dataEdit.index] = {pedido, nota, description, volumes, hora, trans };
         }
@@ -29,10 +29,9 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
         : [...(data ? data :[])];
 
         localStorage.setItem("cad_cliente", JSON.stringify(newDataArray));
-
         setData(newDataArray);
-
         onClose();
+        return alert("Dados gravados com sucesso! 👍");
         
     };
         const notaAlreadyExists = () => {
