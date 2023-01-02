@@ -96,7 +96,7 @@ const App = () => {
                 <Td maxW={isMobile ? 5 : 100}>{volumes}</Td>
                 <Td maxW={isMobile ? 5 : 100}>{hora}</Td>
                 <Td maxW={isMobile ? 5 : 500}>{description}</Td>
-                <Td maxW={isMobile ? 5 : 100} bg={ trans === "RDS" ? "pink" : "gray.100" &&
+                <Td maxW={isMobile ? 5 : 100} textAlign='center'rounded='lg' bg={ trans === "RDS" ? "pink" : "gray.100" &&
                trans === "JADLOG" ? "#38A169" : "gray.100" &&
                trans === "REUNIDAS" ? "#4A5568" : "gray.100"
                }>{trans}</Td>
