@@ -1,5 +1,6 @@
 import {
-    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, FormControl, FormLabel, Input, Box, Select, background } from '@chakra-ui/react';
+    Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, 
+    ModalCloseButton, Button, FormControl, FormLabel, Input, Box, Select, useToast } from '@chakra-ui/react';
 import { useState } from 'react';
 
 const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
@@ -9,7 +10,7 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
     const [volumes, setVolumes] = useState(dataEdit.volumes || "");
     const [hora, setHora] = useState(dataEdit.hora || "");
     const [trans, setTrans] = useState(dataEdit.trans || "");
-    
+    const toast = useToast();
     const handleSave = () => {
         if (!pedido || !nota) return;
         if (notaAlreadyExists()) {
@@ -31,7 +32,10 @@ const ModalComp = ({ data, setData, dataEdit, isOpen, onClose}) => {
         localStorage.setItem("cad_cliente", JSON.stringify(newDataArray));
         setData(newDataArray);
         onClose();
-        return alert("Dados gravados com sucesso! 👍");
+        return toast({
+              title: `Dados gravados com sucesso!`,
+              isClosable: true,
+            });
         
     };
         const notaAlreadyExists = () => {
